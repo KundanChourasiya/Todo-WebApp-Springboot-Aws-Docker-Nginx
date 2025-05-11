@@ -1,6 +1,6 @@
 # Todo-WebApp-Springboot-Aws-Docker-Nginx
 
-### Set up an AWS EC2 instance and install Docker to run Nginx as a reverse proxy, forwarding traffic to services running inside the Kubernetes cluster.
+### Set up an AWS EC2 instance and install Docker to run Nginx as a reverse proxy.
 
 # Overview
 This guide covers the steps to:
