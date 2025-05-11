@@ -68,6 +68,7 @@ This guide covers the steps to:
      CMD ["java", "-jar", "my-project.war"]
     ```
 13. Create docker-compose file to build docker services.
+    Note: here we can use env file also for environment variable.
      ```
      docker-compose.yml
      ```
@@ -144,7 +145,7 @@ This guide covers the steps to:
         driver: bridge
     ```
 
-14. check database url in project application.properties file there is “allowPublicKeyRetrieval=true&useSSL=false” public key retrieval or not, and check environment variable file the .env file like below.
+15. check database url in project application.properties file there is “allowPublicKeyRetrieval=true&useSSL=false” public key retrieval or not, and check environment variable file the .env file like below.
 
     * application.properties
       ```properties
@@ -184,7 +185,7 @@ This guide covers the steps to:
       MYSQL_USERNAME=root   # database username
       MYSQL_PASSWORD=test   # database password
       ```
-15. Create a folder inside the project directory with name nginx and inside the folder create a docker file for create nginx image.
+16. Create a folder inside the project directory with name nginx and inside the folder create a docker file for create nginx image.
     * Dockerfile
     ```yml
     # pull nginx image
@@ -192,7 +193,7 @@ This guide covers the steps to:
       
       COPY ./default.conf /etc/nginx/conf.d/default.conf
     ```
-16. Create a default.conf file inside the nginx folder for Configure the nginx default port with host server ports.
+17. Create a default.conf file inside the nginx folder for Configure the nginx default port with host server ports.
     ```yml
     server {
           listen 80;          # Nginx server default port
@@ -207,14 +208,14 @@ This guide covers the steps to:
           }
       }
     ```
-17. Build the docker services.
+18. Build the docker services.
     ```
     docker compose up -d --build
     ```
-18. Configure the AWS EC2 instance's security group to allow access from anywhere on port 80, since the Spring Boot application is running on that port.
+19. Configure the AWS EC2 instance's security group to allow access from anywhere on port 80, since the Spring Boot application is running on that port.
     ![image](https://github.com/user-attachments/assets/4ba50025-431a-4deb-9835-b656b3f6f1e0)
 
-19. Open your browser, enter the URL with the port number, and submit some data to save it in the database.
+20. Open your browser, enter the URL with the port number, and submit some data to save it in the database.
 > [!NOTE]
 > Note: The Nginx server is running on the default port 80 and it forwards client requests to the backend server.
 
