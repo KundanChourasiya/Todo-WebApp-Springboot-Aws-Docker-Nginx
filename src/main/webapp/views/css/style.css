@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: "Trirong", serif;
+	font-size: 12px;
+	background-color: #fce4ec;
+}
+
+.top-box {
+	background-color: #ec407a;
+	text-align: center;
+	color: aliceblue;
+	margin-top: 0px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 90%, 75% 100%, 60% 90%, 45% 100%,30% 90%, 15% 100%, 0 90%);
+}
+
+.form-box {
+	color: #e91e63;
+	margin: -1.5rem 0 1rem 0;
+}
+
+nav .brand-logo {
+	position: absolute;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 28px;
+}
+
+input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default),
+	input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default),
+	input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default),
+	input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default),
+	input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default),
+	input[type="search"]:not(.browser-default), textarea.materialize-textarea
+	{
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ec407a;
+}
+
+.buttons {
+	margin-left: 30px;
+}
+
+.icon4343 {
+	font-size: 30px;
+	vertical-align: middle;
+}
+
+.card .card-title {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.errors {
+	color: #d50000;
+	font-weight: 600;
+}
+
+.chip {
+    display: inline-block;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #fce4ec;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
